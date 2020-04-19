@@ -4,9 +4,9 @@ import Clipboard from "clipboard"
 import EmojiResultsRow from "../components/EmojiResultsRow"
 import "../styles/EmojiResults.css"
 
-export default class EmojiRresults extends PureComponent {
+export default class EmojiResults extends PureComponent {
   static propTypes = {
-    emojiData: PropTypes.array.isRequired
+    emojiData: PropTypes.array.isRequired,
   }
 
   componentDidMount() {
@@ -20,7 +20,7 @@ export default class EmojiRresults extends PureComponent {
   render() {
     return (
       <div className='component-emoji-results'>
-        {this.props.emojiData.map(emojiData => (
+        {this.props.emojiData.map((emojiData) => (
           <EmojiResultsRow
             key={emojiData.title}
             symbol={emojiData.symbol}
